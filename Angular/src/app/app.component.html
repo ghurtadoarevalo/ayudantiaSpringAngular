@@ -1,0 +1,79 @@
+<body style="background-color:#be1522;">
+<div>
+  <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="background-color:#f0f0f0;">
+    <div class="container"><a class="navbar-brand" href="#"><img src="https://www.alaya.cl/wp-content/uploads/marcabig.png"></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+      <div
+        class="collapse navbar-collapse" id="navcol-1">
+        <ul class="nav navbar-nav mr-auto">
+          <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="#">Ideas</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="#">Retos</a></li>
+        </ul><span class="navbar-text actions"> <a href="#" class="login">Iniciar sesion</a><a class="btn btn-light action-button" role="button" href="#" style="background-color:#be1522;">Regístrate</a></span></div>
+    </div>
+  </nav>
+</div>
+<div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron visible" data-bs-hover-animate="pulse" style="background-color:#f0f0f0;margin:0px;padding:20px 20px 20px 20px;">
+          <h1 style="color:#333333;">¡Bienvenidos!</h1>
+          <p class="lead text-info" style="color:#be1522;">En este sitio encontrarán un lugar para compartir sus ideas y aceptar retos de prestigiosas compañías, lo que les dará la oportunidad única de emprender.</p>
+          <p></p>
+          <div class="media">
+            <div class="media-body"></div>
+          </div>
+        </div>
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean-search" style="margin:10px 0px 10px 0px;background-color:#fafafa;">
+          <div class="container"><a class="navbar-brand" style="color:#808080;">Buscador de ideas</a>
+            <div
+              class="collapse navbar-collapse" id="navcol-1">
+              <ul class="nav navbar-nav"></ul>
+              <form class="form-inline mr-auto" target="_self" style="background-color:#e76f78;width:500px;">
+                <div class="form-group"><label for="search-field"><i class="fa fa-search" style="color:#fcfeff;font-size:20px;margin:0px 0px 0px 20px;"></i></label><input #idea
+                                                                                                                                                                           (keyup.enter)="getIdeasSearch(idea.value)"
+                                                                                                                                                                           (blur)="getIdeasSearch(idea.value); idea.value=''" class="form-control search-field" type="search" name="search" id="search-field"></div>
+              </form><button (click)=getIdeasSearch(idea.value) class="btn btn-primary mr-auto" type="button" style="background-color:#be1522;">Buscar idea</button></div>
+          </div>
+
+        </nav>
+
+        <div class="card" style="background-color:#be1522;">
+          <div class="jumbotron" style="background-color:#ffffff;padding:40px 70px 20px 70px; margin-bottom: 0px;">
+            <h1>Ideas</h1>
+            <p style="color:#be1522;font-size:25px;">En este lugar podrá encontrar todos las ideas elaboradas por los usuarios</p>
+            <div class="row">
+              <div *ngFor="let idea of ideas"  class="card col-md-4">
+                <div class="card-body d-flex flex-column text-center">
+                  <h4 class="card-title " style="color:#be1522;">{{idea.name}}</h4>
+                  <p class="card-text" style="max-width: 100%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{idea.description}}</p>
+                </div>
+                <button class="btn btn-primary text-center" type="button" style="background-color:#be1522; margin-bottom:10px;">Ver idea</button>
+              </div>
+            </div>
+          </div>
+
+
+          <nav class="navbar navbar-light navbar-expand-md navigation-clean-search" style="margin:10px 0px 10px 0px;background-color:#fafafa;">
+            <div class="container"><a class="navbar-brand" style="color:#808080;">Buscador de retos</a>
+              <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav"></ul>
+                <form class="form-inline mr-auto" target="_self" style="background-color:#e76f78;width:500px;">
+                  <div class="form-group"><label for="search-field"><i class="fa fa-search" style="color:#fcfeff;font-size:20px;margin:0px 0px 0px 20px;"></i></label><input #reto
+                                                                                                                                                                             (keyup.enter)="getRetosSearch(reto.value)"
+                                                                                                                                                                             (blur)="getRetosSearch(reto.value); reto.value=''" class="form-control search-field" type="search" name="search" id="search-field"></div>
+                </form><button (click)=getRetosSearch(reto.value) class="btn btn-primary mr-auto" type="button" style="background-color:#be1522;">Buscar reto</button></div>
+            </div>
+
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.min.js"></script>
+</body>
